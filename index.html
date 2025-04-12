@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শুভ নববর্ষ ২০২৫ - Pohela Boishakh</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @font-face {
+            font-family: 'BengaliFont';
+            src: url('data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAeAAA4AAAAAEVQAAAcpAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgXAcDAZgAIEEEQgK1zS+EwuBIgABNgIkA4QcBCAFhAgHIBswDciOjIwu4qFkUL+feXb3e6NF6IjCGLTGakXIiDHIInpBLCy6KNTqKNZ2dnx3MbMw1//v936QWwtX6E+VOopCpO7kU/Px3dw/ggz9G+FmXsJNqDdvRiNidnrcx8hqoRJh8WbOb3t6h753QTb+DyxAQMDmUZjMdTEKjZUZCdPK1Aib5rUQDwSADeA6IBzwB4X/57qcJpXKy7cK7Vn+Pee/uXdGakQpMB4xohIalUQSSolQmfBf3cDCwxg6fBDhkDkRljDRuNLm0O5MJJ0EAGTr5qcG5FVlFSrjqY1cLdEyoAn+P++vrzMFglA2nUWnUElP+Y3e/N//7hcB1K5tDSiDMFTAWOWoZyU37OFAC4Y7AOEGAGHAZEfFREcVXVxXoShkEEhmU08Z15H3DSMQ8FUWsgnMiLNMDCmkEcYjnscj4RKlb7pMo5yoQvMUipO+hUKZVGbWyPmWFzRGN2X+0Xvw0p/lT+/vLv9GF/2aXJfQCbFhNO7XqxQqyBWZRJiXsZCSRpTGUkHZxvLtL3Jbvv9p3vVVX9WX+5eGBfVBbSEPyrDn6q+5ql/5iLcHE4PZvIm4iA2IjfENSAmLD03whWb6QlPnGyYahpM5JvZ7Zn1wzPuuNRPXVnvXLjtjwtq12Zlh7ZaCXVmWnLPZu3dtWpu9JrJvV8bZvUHXnm3r1q5J3x0emrp9V/TZ3e6JyZFndj3ZkDuVnTG1YXVsXzAQOJkeOLkqoDm+wlf8bBPaH4oG58VURHrXgGtSWGBueHxwflhskH/2hYs3srIMfN6hWHpDWtTenKiDKUX0KXOY7vk5lhuXAXa7E+f0a4DdYu3Ogc1iHbjIuRcZsOJr5t5/4BxN9OZr3gDQEQFw9z8AcAHH/ztBEgAAgTvgwRiEAQC3EHApQOCrgTb+nGQKHNnJQ0rT5MWpVDkwzRYWEiGTPJkYGePH0XmRCYGCq0wOFJLVJsQpFCMqbxnE5GUkkynMk76ZIsoOLnMQk6cBIH2bXq4KRVHhhCJOLl4elGlPCyumhqdhDKaWbGMUPX9+FFEbmyyhqsNibYKEGutjQC6YK00SU2mD8sLNhZsL9+9/a2BYVNUBzF+WFOsVVJJdRGtsjhEz/jKlHqbRZDGp7vjWiHO2R42tMVLGX5ZFqBfY7M/UE5k8uZpYS5qx3XPLCtuS5LRKIZenSZi83IIqZc8k9vy0S2Smp+h70jI2zZ6ZBdZFrIpWV4Rn8cFzVYJMHl9TJRNXyHSqhJrI8iWBOLsM1FfZotIZyeuYGCFp9UhlcUhkaVBFWYiUl5r5k8q0WMZtJy4OThQvFpVEJkk35+N0w7qYpCWYOtW6zqW9FwuOLKrH9lHFrcOHW/2vDl5tDVzqoS62ertam102J5fGi63GnXZiCaKh1FXcYdlaGq1+TDotW3mxnVhmVdvKpY3EQrq2VGudh4KmVnpJq1PpoZS26ltZPsQ+XGs76PedbZVuHXRYrSs9Vqew3Wob9S6rrdVhsUpbXbZNRZhqdG7bWsqN0xG7c9ND5GS1bbWTlQ6q0+lq7aGeWrj+wV3uSw9uLFVFaVCaXPWRXX6qEqrCqjHuoZWUUdJPRXVrqFbMw9Uc/YC+SqmKaqCeIZ8yqJaUmXxHYo8aTXtXHPEFP8WXMJ5q6wLcuRVHJoVvzVP8+IVUfU1UYVRDfMXXhUxUvYnMy7kYzxQFDvdvZrpdC84LGAm2j5mafnwzffU3KDvXhZ8LuBMSdKTvkYZhMG2MdRSLNj7E9GDjQ0bH/QnmQWx2OILvhKpExN5T7mWPBH+97N8nTYt/YOF79H7jXQU9OyLjH16wzf6+4fOt2KJD8GFuU97jjXmZ+8Wblcnv5n+U/V7Nx9kfcPyFHVlwvC0Qb2xPRDvb4n4L2jEIdowtGEfHGD4H0UT1Q4Kv9QFAJQCQM0cA9T3PAN4DIKNzCKCuA+g/BSh9B+g8EfD6DlAgQaZIlcLO89vOFACcBEDdoQNoDQB0cgCQCwUAGVD1IsBXCYDqEQOoBzzXxEk2qnVZm9c/Njfn+4UZLQAmLdcBk6pRpz4z9K8qBvZYZHiGG4BnRw4E7qs/vy24//UNQOExwVsRmCgA2LEi+G8Ksj49w//YYQCADW1xgGfRWngE8OMAAMLLsYjg//jPHfhxo09kOQv+N/NhAQAAAAAAAAAAAAAAAAAAAAD29AEA/QBw9gSAgAYAuOEgANQ9ANhSA0CABiB7DACkdvybvLcDjl4AgF47AQBELwCspDoAgNY5APRoDgDwtQdA0GMLCHIBJAEQfBiAkPsAEAoPAFJPHABitwJAGI0CIOQZAESViwFRl6ZGRVqSmeTOXLd1P9gMpPGq1PvXkFMDyxGjMnRyOdxcyKnc5XjyRfUm1jpdYufrVjDxWFMKNcuTZTCTcxRNRPZo93JeyCkWkZnZZCmTzNLZUnZOmSxucmFpnGnMNKazUr5qPYSUHGRtcxMlTjKmLOzKHMhMdyXhf0PEkW1J1VqlRr/+D6msSdckL7e6Xw+UYq5CuLRKNElDi5OJgqdSy03RYZPpuouJWJmTxYWVZGdM9kZRaluS12kp2s3k5GrW4Y64hM8qyXpPo15cR37SJ52K6ZCcXG1xKbmzAaa5yXnOyqvAZFtOUzWRxZnldETEzVxJmpRLm83M6WqLM+vJVLV5W6LiOcmpojOVBvMQl6rIYrxqOpF1JeZwx1RR3qW7qjjXzKg3m9m5qdGRvz15+F+JUgIAAAA=') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            background: #0b0b0b;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'BengaliFont', Arial, sans-serif;
+            color: #fff;
+        }
+        
+        #canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 90vh;
+            max-height: 800px;
+            z-index: 2;
+            perspective: 1000px;
+        }
+        
+        .card {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 50px rgba(255, 0, 255, 0.3);
+            border-radius: 15px;
+        }
+        
+        .card:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+        
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, #7209b7, #3a0ca3, #4361ee);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .mask {
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23000" fill-opacity="0.7" d="M0,96L48,117.3C96,139,192,181,288,208C384,235,480,245,576,224C672,203,768,149,864,144C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom center;
+            background-size: cover;
+        }
+        
+        .pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="3" cy="3" r="1.5" fill="%23ffffff" fill-opacity="0.15"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        
+        .bengali-year {
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            font-weight: bold;
+            color: transparent;
+            background: linear-gradient(to right, #f72585, #b5179e, #7209b7, #560bad, #480ca8, #3a0ca3, #3f37c9, #4361ee, #4895ef, #4cc9f0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            animation: float 3s ease-in-out infinite;
+            z-index: 10;
+        }
+        
+        .main-title {
+            position: absolute;
+            left: 50%;
+            top: 48%;
+            transform: translate(-50%, -50%);
+            font-size: 72px;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            color: #f9c80e;
+            text-shadow: 0 0 20px rgba(249, 200, 14, 0.5);
+            z-index: 10;
+        }
+        
+        .subtitle {
+            position: absolute;
+            left: 50%;
+            top: 62%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            z-index: 10;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(-50%, -50%); }
+            50% { transform: translate(-50%, -60%); }
+            100% { transform: translate(-50%, -50%); }
+        }
+        
+        .alpona {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .alpona-pattern {
+            position: absolute;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+        
+        .alpona-1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 10%;
+            border-color: rgba(255, 105, 180, 0.3);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .alpona-2 {
+            width: 200px;
+            height: 200px;
+            bottom: 15%;
+            right: 15%;
+            border-color: rgba(255, 165, 0, 0.3);
+            animation: rotate 15s linear infinite reverse;
+        }
+        
+        .alpona-3 {
+            width: 150px;
+            height: 150px;
+            top: 30%;
+            right: 10%;
+            border-color: rgba(127, 255, 212, 0.3);
+            animation: rotate 12s linear infinite;
+        }
+        
+        .alpona-4 {
+            width: 180px;
+            height: 180px;
+            bottom: 10%;
+            left: 20%;
+            border-color: rgba(173, 255, 47, 0.3);
+            animation: rotate 18s linear infinite reverse;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .cultural-element {
+            position: absolute;
+            transform-style: preserve-3d;
+        }
+        
+        .mask-3d {
+            position: absolute;
+            bottom: 10%;
+            left: 15%;
+            width: 100px;
+            height: 120px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"><path fill="%23FFD700" d="M50,10 C30,10 15,30 15,55 C15,80 30,100 50,100 C70,100 85,80 85,55 C85,30 70,10 50,10 Z M30,40 C35,40 35,45 30,45 C25,45 25,40 30,40 Z M70,40 C75,40 75,45 70,45 C65,45 65,40 70,40 Z M40,70 C45,75 55,75 60,70 C55,80 45,80 40,70 Z"/></svg>') no-repeat center center;
+            transform: translateZ(40px) rotateY(-10deg);
+            filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.7));
+            animation: float-mask 5s ease-in-out infinite alternate;
+        }
+        
+        @keyframes float-mask {
+            0% { transform: translateZ(40px) rotateY(-10deg); }
+            100% { transform: translateZ(60px) rotateY(10deg); }
+        }
+        
+        .drum-3d {
+            position: absolute;
+            bottom: 15%;
+            right: 15%;
+            width: 120px;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100"><ellipse cx="60" cy="25" rx="40" ry="15" fill="%23FF6B6B"/><rect x="20" y="25" width="80" height="50" fill="%23FF6B6B"/><ellipse cx="60" cy="75" rx="40" ry="15" fill="%23FF6B6B"/><line x1="30" y1="35" x2="30" y2="65" stroke="%23FFF" stroke-width="2"/><line x1="60" y1="35" x2="60" y2="65" stroke="%23FFF" stroke-width="2"/><line x1="90" y1="35" x2="90" y2="65" stroke="%23FFF" stroke-width="2"/></svg>') no-repeat center center;
+            transform: translateZ(50px) rotateY(10deg);
+            filter: drop-shadow(0 0 15px rgba(255, 107, 107, 0.7));
+            animation: float-drum 4s ease-in-out infinite alternate;
+        }
+        
+        @keyframes float-drum {
+            0% { transform: translateZ(50px) rotateY(10deg); }
+            100% { transform: translateZ(70px) rotateY(-10deg); }
+        }
+        
+        .flower-3d {
+            position: absolute;
+            top: 15%;
+            right: 20%;
+            width: 80px;
+            height: 80px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80"><circle cx="40" cy="40" r="10" fill="%23FFD700"/><circle cx="40" cy="20" r="10" fill="%23FF6B6B"/><circle cx="60" cy="40" r="10" fill="%23FF6B6B"/><circle cx="40" cy="60" r="10" fill="%23FF6B6B"/><circle cx="20" cy="40" r="10" fill="%23FF6B6B"/><circle cx="55" cy="25" r="10" fill="%23FF6B6B"/><circle cx="55" cy="55" r="10" fill="%23FF6B6B"/><circle cx="25" cy="55" r="10" fill="%23FF6B6B"/><circle cx="25" cy="25" r="10" fill="%23FF6B6B"/></svg>') no-repeat center center;
+            transform: translateZ(30px) rotate(0deg);
+            filter: drop-shadow(0 0 15px rgba(255, 107, 107, 0.7));
+            animation: rotate-flower 10s linear infinite;
+        }
+        
+        @keyframes rotate-flower {
+            0% { transform: translateZ(30px) rotate(0deg); }
+            100% { transform: translateZ(30px) rotate(360deg); }
+        }
+        
+        .lantern {
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            background: rgba(255, 165, 0, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+        }
+        
+        .lantern:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            width: 10px;
+            height: 10px;
+            background: #FFD700;
+            border-radius: 50%;
+        }
+        
+        .lantern:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 10px;
+            width: 20px;
+            height: 5px;
+            background: #FFD700;
+            border-radius: 2px;
+        }
+        
+        .lantern-1 {
+            top: 15%;
+            left: 20%;
+            transform: translateZ(20px);
+            animation: swing 3s ease-in-out infinite;
+        }
+        
+        .lantern-2 {
+            top: 25%;
+            right: 10%;
+            transform: translateZ(20px);
+            animation: swing 3.5s ease-in-out infinite;
+        }
+        
+        @keyframes swing {
+            0% { transform: translateZ(20px) rotate(5deg); }
+            50% { transform: translateZ(20px) rotate(-5deg); }
+            100% { transform: translateZ(20px) rotate(5deg); }
+        }
+        
+        .floating-text {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            text-align: center;
+            line-height: 1.5;
+            z-index: 5;
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: linear-gradient(to right, #f72585, #4cc9f0);
+            border-radius: 50%;
+            animation: particle-float 8s ease-in-out infinite;
+        }
+        
+        @keyframes particle-float {
+            0% { transform: translateY(100vh) scale(0); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+        }
+        
+        .info-text {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-size: 18px;
+            color: #f9c80e;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    
+    <div class="container">
+        <div class="card" id="card">
+            <div class="background">
+                <div class="pattern"></div>
+                <div class="mask"></div>
+            </div>
+            
+            <div class="alpona">
+                <div class="alpona-pattern alpona-1"></div>
+                <div class="alpona-pattern alpona-2"></div>
+                <div class="alpona-pattern alpona-3"></div>
+                <div class="alpona-pattern alpona-4"></div>
+            </div>
+            
+            <div class="bengali-year">১৪৩২</div>
+            <div class="main-title">শুভ নববর্ষ</div>
+            <div class="subtitle">পহেলা বৈশাখ ২০২৫</div>
+            
+            <div class="cultural-element mask-3d"></div>
+            <div class="cultural-element drum-3d"></div>
+            <div class="cultural-element flower-3d"></div>
+            
+            <div class="lantern lantern-1"></div>
+            <div class="lantern lantern-2"></div>
+            
+            <div class="floating-text">
+                নতুন বছরে নতুন আশা<br>
+                নতুন স্বপ্ন নতুন ভালোবাসা
+            </div>
+            
+            <div class="particles" id="particles"></div>
+            
+            <div class="info-text">~ শুভ বাংলা নববর্ষ ~</div>
+        </div>
+    </div>
+    
+    <script>
+        // THREE.js Background
+        const canvas = document.getElementById('canvas');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        
+        // Create stars
+        const starsGeometry = new THREE.BufferGeometry();
+        const starsMaterial = new THREE.PointsMaterial({
+            color: 0xffffff,
+            size: 1.5,
+            transparent: true,
+            opacity: 0.8
+        });
+        
+        const starsVertices = [];
+        for (let i = 0; i < 1000; i++) {
+            const x = (Math.random() - 0.5) * 2000;
+            const y = (Math.random() - 0.5) * 2000;
+            const z = (Math.random() - 0.5) * 2000;
+            starsVertices.push(x, y, z);
+        }
+        
+        starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
+        const stars = new THREE.Points(starsGeometry, starsMaterial);
+        scene.add(stars);
+        
+        // Create colorful particles
+        const particlesGroup = new THREE.Group();
+        scene.add(particlesGroup);
+        
+        for (let i = 0; i < 100; i++) {
+            const geometry = new THREE.SphereGeometry(0.5, 8, 8);
+            
+            // Random color from Bengali festival colors
+            const colors = [0xff6b6b, 0xf9c80e, 0x7209b7, 0x4cc9f0, 0x06d6a0];
+            const material = new THREE.MeshBasicMaterial({
+                color: colors[Math.floor(Math.random() * colors.length)],
+                transparent: true,
+                opacity: Math.random() * 0.5 + 0.5
+            });
+            
+            const particle = new THREE.Mesh(geometry, material);
+            
+            // Position particles around the scene
+            const x = (Math.random() - 0.5) * 30;
+            const y = (Math.random() - 0.5) * 30;
+            const z = (Math.random() - 0.5) * 30;
+            
+            particle.position.set(x, y, z);
+            
+            // Store velocity for animation
+            particle.userData = {
+                velocity: new THREE.Vector3(
+                    (Math.random() - 0.5) * 0.05,
+                    (Math.random() - 0.5) * 0.05,
+                    (Math.random() - 0.5) * 0.05
+                )
+            };
+            
+            particlesGroup.add(particle);
+        }
+        
+        // Add a central light
+        const light = new THREE.PointLight(0xffd700, 1, 100);
+        light.position.set(0, 0, 20);
+        scene.add(light);
+        
+        // Set camera position
+        camera.position.z = 30;
+        
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            // Rotate stars slowly
+            stars.rotation.x += 0.0005;
+            stars.rotation.y += 0.0003;
+            
+            // Move particles
+            particlesGroup.children.forEach(particle => {
+                particle.position.add(particle.userData.velocity);
+                
+                // Reset particle position if it moves too far away
+                if (particle.position.length() > 15) {
